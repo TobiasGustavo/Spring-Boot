@@ -14,12 +14,12 @@ import javax.validation.constraints.Size;
 
 
 
-@Entity // entidade do JPA 
+@Entity 
 @Table (name = "postagem" )
 
-public class Postagem {
+		public class Postagem {
 
-		@Id  // Chave primaria 
+		@Id   
 		@GeneratedValue (strategy = GenerationType.IDENTITY)
 		private long id;
 		
