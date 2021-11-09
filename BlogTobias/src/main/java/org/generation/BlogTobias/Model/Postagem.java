@@ -10,6 +10,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -26,13 +27,13 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 		@GeneratedValue (strategy = GenerationType.IDENTITY)
 		private long id;
 		
-	
-		@NotNull
-		@Size(min = 5, max = 100)
+		@NotNull(message = "O atributo título é obrigatório")
+		@Size(min = 5, max = 100, message = "O atributo título deve conter no mínimo 5 e no máximo 100 caracteres")
 		private String titulo;
+	
 		
-		@NotNull
-		@Size(min = 5, max = 100)
+		@NotBlank(message = "O atributo texto é obrigatório")
+		@Size(min = 10, max = 500, message = "O atributo título deve conter no mínimo 5 e no máximo 500 caracteres")
 		private String texto;
 		
 		@Temporal(TemporalType.TIMESTAMP)
