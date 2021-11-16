@@ -56,7 +56,7 @@ public class UsuarioControllerTest {
 	@DisplayName("Não deve permitir duplicação do Usuário")
 	public void naoDeveDuplicarUsuario() {
 
-		usuarioService.(new Usuario(0L, 
+		usuarioService.cadastrarUsuario(new Usuario(0L, 
 			"Maria da Silva", "maria_silva@email.com.br", "13465278"));
 
 		HttpEntity<Usuario> requisicao = new HttpEntity<Usuario>(new Usuario(0L, 
