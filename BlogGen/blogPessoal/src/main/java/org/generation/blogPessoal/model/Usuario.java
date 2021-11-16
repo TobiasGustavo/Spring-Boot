@@ -28,6 +28,18 @@ public class Usuario {
 	@Size(min = 5, max = 100)
 	private String senha;
 
+	
+	public Usuario(long id, String nome,String usuario, String senha) { //contrutor Testes 
+		this.id = id;
+		this.nome = nome;
+		this.usuario = usuario;
+		this.senha = senha;
+		
+	}
+	public Usuario() {
+		
+	}
+
 	public long getId() {
 		return id;
 	}
